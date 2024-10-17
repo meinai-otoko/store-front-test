@@ -37,6 +37,8 @@ jobs:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
+    VUE_APP_ORDER_SERVICE_URL : https://order-service.fake.net/
+    VUE_APP_PRODUCT_SERVICE_URL : https://product-service.fake.net/
     steps:
       - name: Close Pull Request
         id: closepullrequest
